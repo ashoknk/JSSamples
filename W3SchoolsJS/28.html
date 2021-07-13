@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Math.random()</h2>
+
+<p>Math.random() returns a random number between 0 (included) and 1 (excluded):</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = Math.random();
+</script>
+<!-- ---------------------------------- -->
+
+<p>Math.floor(Math.random() * 10) returns a random integer between 0 and 9 (both 
+    included):</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML =
+    Math.floor(Math.random() * 10);
+    </script>
+<!-- ---------------------------------- -->
+
+<p>Math.floor(Math.random() * 11) returns a random integer between 0 and 10 (both included):</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+Math.floor(Math.random() * 11);
+</script>
+
+<!-- ---------------------------------- -->
+<p>Math.floor(Math.random() * 100)) returns a random integer between 0 and 99 
+    (both included):</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML =
+    Math.floor(Math.random() * 100);
+    </script>
+<!-- ---------------------------------- -->
+<p>Math.floor() used with Math.random() * 101 returns a random integer between 0 and 100 
+    (both included):</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML =
+    Math.floor(Math.random() * 101);
+    </script>
+
+<!-- ---------------------------------- -->
+<p>Math.floor(Math.random() * 10) + 1) returns a random integer between 1 and 10 
+    (both included):</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML =
+    Math.floor(Math.random() * 10) + 1;
+    </script>
+<!-- ---------------------------------- -->
+<p>Math.floor(Math.random() * 100) + 1) returns a random integer between 1 and 
+    100 (both included):</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML =
+    Math.floor(Math.random() * 100) + 1;
+    </script>
+<!-- ---------------------------------- -->
+<h2>JavaScript Math.random() A Proper Random Function</h2>
+
+<p>Every time you click the button, getRndInteger(min, max) returns a random number between 0 
+and 9 (both included):</p>
+
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>Every time you click the button, getRndInteger(min, max) returns a random number between 1 and 10 (both included):</p>
+
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,10)">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+</script>
+<!-- ---------------------------------- -->
+
+
+</body>
+</html>
+

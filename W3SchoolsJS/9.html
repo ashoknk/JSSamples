@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Array indexes are zero-based, which means the first item is [0].</p>
+<p id="demo1"></p>
+
+<h2>JavaScript Objects</h2>
+<p id="demo2"></p>
+
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+<p id="demo3"></p>
+
+
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+<p id="demo4"></p>
+
+<h2>JavaScript data type undefined</h2>
+<p>The value (and the data type) of a variable with no value is <b>undefined</b>.</p>
+<p id="demo5"></p>
+
+<p>Variables can be emptied if you set the value to <b>undefined</b>.</p>
+<p id="demo6"></p>
+
+<p>An empty string has both a legal value and a type:</p>
+<p id="demo7"></p>
+
+<!-------------------------------------------->
+<script>
+
+const cars = ["Saab","Volvo","BMW"];
+document.getElementById("demo1").innerHTML = cars[0];
+
+//--------------
+const person = {
+  firstName : "John",
+  lastName  : "Doe",
+  age     : 50,
+  eyeColor  : "blue"
+};
+
+document.getElementById("demo2").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+//--------------
+document.getElementById("demo3").innerHTML = 
+typeof "" + "<br>" +
+typeof "John" + "<br>" + 
+typeof "John Doe";
+//--------------
+document.getElementById("demo4").innerHTML = 
+typeof 0 + "<br>" + 
+typeof 314 + "<br>" +
+typeof 3.14 + "<br>" +
+typeof (3) + "<br>" +
+typeof (3 + 4);
+//--------------
+let car;
+document.getElementById("demo5").innerHTML =
+car + "<br>" + typeof car;
+//--------------
+let car2 = "Volvo";
+car2 = undefined;
+document.getElementById("demo6").innerHTML =
+car2 + "<br>" + typeof car2;
+
+//--------------
+let car3 = "";
+document.getElementById("demo7").innerHTML =
+"The value is: " +
+car3 + "<br>" +
+"The type is: " + typeof car3;
+//--------------
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

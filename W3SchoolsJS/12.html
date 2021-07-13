@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Events</h2>
+<br>
+HTML events are "things" that happen to HTML elements.
+<br>
+ When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+<br>
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p id="demo"></p>
+
+<h4>In the next example, the code changes the content of its own element (using this.innerHTML):</h4>
+<button onclick="this.innerHTML=Date()">The time is?</button>
+
+
+<!-- <button onclick="displayDate()">The time is?</button> -->
+
+<h4>JavaScript code is often several lines long. It is more common to see event attributes calling functions:</h4>
+<button onclick="displayDate2()">The time is?</button>
+
+<script>
+function displayDate2() {
+  document.getElementById("demo2").innerHTML = Date();
+}
+</script>
+<p id="demo2"></p>
+</body>
+</html>

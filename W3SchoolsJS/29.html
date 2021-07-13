@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Booleans</h2>
+<p>Display the value of Boolean(10 > 9):</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = Boolean(10 > 9);
+</script>
+
+<!-- ---------------------------------- -->
+<p>Display the value of 10 > 9:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 10 > 9;
+</script>
+<!-- ---------------------------------- -->
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"100 is " + Boolean(100) + "<br>" +
+"3.14 is " + Boolean(3.14) + "<br>" +
+"-15 is " + Boolean(-15) + "<br>" +
+"Any (not empty) string is " + Boolean("Hello") + "<br>" +
+"Even the string 'false' is " + Boolean('false') + "<br>" +
+"Any expression (except zero) is " + Boolean(1 + 7 + 3.14);
+</script>
+<!-- ---------------------------------- -->
+<p>Display the Boolean value of 0:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 0;
+document.getElementById("demo").innerHTML = Boolean(x);
+</script>
+<!-- ---------------------------------- -->
+<p>Display the Boolean value of -0:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = -0;
+document.getElementById("demo").innerHTML = Boolean(x);
+</script>
+<!-- ---------------------------------- -->
+<p>Display the Boolean value of "":</p>
+
+<p id="demo"></p>
+
+<script>
+let x = "";
+document.getElementById("demo").innerHTML = Boolean(x);
+</script>
+<!-- ---------------------------------- -->
+<p>Display the Boolean value of undefined:</p>
+
+<p id="demo"></p>
+
+<script>
+let x;
+document.getElementById("demo").innerHTML = Boolean(x);
+</script>
+<!-- ---------------------------------- -->
+<p>Display the Boolean value of null:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = null;
+document.getElementById("demo").innerHTML = Boolean(x);
+</script>
+<!-- ---------------------------------- -->
+<p>Display the Boolean value of false:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = false;
+document.getElementById("demo").innerHTML = Boolean(x);
+</script>
+<!-- ---------------------------------- -->
+<p>Display the Boolean value of NaN:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 10 / "Hello";
+document.getElementById("demo").innerHTML = Boolean(x);
+</script>
+<!-- ---------------------------------- -->
+<p>Never create booleans as objects.</p>
+<p>Booleans and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = false;         // x is a boolean
+let y = new Boolean(false);  // y is an object
+document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+</script>
+<!-- ---------------------------------- -->
+<p>Never create booleans as objects.</p>
+<p>Booleans and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = false;         // x is a boolean
+let y = new Boolean(false);  // y is an object
+document.getElementById("demo").innerHTML = (x==y);
+</script>
+<!-- ---------------------------------- -->
+<p>Never create booleans as objects.</p>
+<p>Booleans and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = false;         // x is a Boolean
+let y = new Boolean(false);  // y is an object
+document.getElementById("demo").innerHTML = (x===y);
+</script>
+
+<!-- ---------------------------------- -->
+<p>Never create booleans as objects.</p>
+<p>Booleans and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = new Boolean(false);  // x is an object
+const y = new Boolean(false);  // y is an object
+document.getElementById("demo").innerHTML = (x==y);
+</script>
+
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+
+
+</body>
+</html>

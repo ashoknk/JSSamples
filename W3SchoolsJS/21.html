@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+<p>The sort() method sorts an array alphabetically.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo1"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+
+function myFunction() {
+  fruits.sort();
+  document.getElementById("demo1").innerHTML = fruits;
+}
+</script>
+
+<!-- ---------------------------------- -->
+
+<p>The reverse() method reverses the elements in an array.</p>
+<p>By combining sort() and reverse() you can sort an array in descending order.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+// Create and display an array:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo2").innerHTML = fruits;
+
+function myFunction() {
+  // First sort the array
+  fruits.sort();
+  // Then reverse it:
+  fruits.reverse();
+  document.getElementById("demo2").innerHTML = fruits;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>Click the button to sort the array in ascending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo3"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo3").innerHTML = points;  
+
+function myFunction() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo3").innerHTML = points;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>Click the button to sort the array in descending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo4"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo4").innerHTML = points;
+
+function myFunction() {
+  points.sort(function(a, b){return b - a});
+  document.getElementById("demo4").innerHTML = points;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>Click the buttons to sort the array alphabetically or numerically.</p>
+
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demo5"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo5").innerHTML = points;  
+
+function myFunction1() {
+  points.sort();
+  document.getElementById("demo5").innerHTML = points;
+}
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo5").innerHTML = points;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo6"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo6").innerHTML = points;  
+
+function myFunction() {
+  points.sort(function(a, b){return 0.5 - Math.random()});
+  document.getElementById("demo6").innerHTML = points;
+}
+</script>
+<!-- ---------------------------------- -->
+<h3>The Fisher Yates Method</h3>
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points;  
+
+function myFunction() {
+  for (let i = points.length -1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i)
+    let k = points[i]
+    points[i] = points[j]
+    points[j] = k
+  }
+  document.getElementById("demo").innerHTML = points;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>The lowest number is <span id="demo"></span>.</p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a-b});
+document.getElementById("demo").innerHTML = points[0];
+</script>
+<!-- ---------------------------------- -->
+<p>The highest number is <span id="demo"></span>.</p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = myArrayMax(points);
+
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+</script>
+<!-- ---------------------------------- -->
+p>The lowest number is <span id="demo"></span>.</p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = myArrayMin(points);
+
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+</script>
+<!-- ---------------------------------- -->
+<p>The highest number is <span id="demo"></span>.</p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = myArrayMax(points);
+
+function myArrayMax(arr) {
+  let len = arr.length;
+  let max = -Infinity;
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
+    }
+  }
+  return max;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>The lowest number is <span id="demo"></span>.</p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = myArrayMin(points);
+
+function myArrayMin(arr) {
+  let len = arr.length;
+  let min = Infinity;
+  while (len--) {
+    if (arr[len] < min) {
+      min = arr[len];
+    }
+  }
+  return min;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>Click the buttons to sort car objects on age.</p>
+
+<button onclick="myFunction()">Sort</button>
+<p id="demo"></p>
+
+<script>
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+
+function myFunction() {
+  cars.sort(function(a, b){return a.year - b.year});
+  displayCars();
+}
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  cars[0].type + " " + cars[0].year + "<br>" +
+  cars[1].type + " " + cars[1].year + "<br>" +
+  cars[2].type + " " + cars[2].year;
+}
+</script>
+<!-- ---------------------------------- -->
+<p>Click the buttons to sort car objects on type.</p>
+
+<button onclick="myFunction()">Sort</button>
+<p id="demo"></p>
+
+<script>
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+
+function myFunction() {
+  cars.sort(function(a, b){
+    let x = a.type.toLowerCase();
+    let y = b.type.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  });
+  displayCars();
+}
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  cars[0].type + " " + cars[0].year + "<br>" +
+  cars[1].type + " " + cars[1].year + "<br>" +
+  cars[2].type + " " + cars[2].year;
+}
+</script>
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+<!-- ---------------------------------- -->
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+
+let x = 16 + "Volvo";
+<p id="demo1"></p>
+<br>
+
+<!-- JavaScript treats 16 and 4 as numbers, until it reaches "Volvo". -->
+let y = 16 + 4 + "Volvo";
+<p id="demo2"></p>
+<br>
+
+let z = "Volvo" + 16 + 4;
+<p id="demo3"></p>
+<br>
+
+<p id="demo4"></p>
+<br>
+
+<p id="demo5"></p>
+<br>
+
+<p id="demo6"></p>
+<br>
+<!-- JavaScript  -->
+
+<script>
+let x = 16 + "Volvo";
+document.getElementById("demo1").innerHTML = x;
+
+let y = 16 + 4 + "Volvo";
+document.getElementById("demo2").innerHTML = y;
+
+let z = "Volvo" + 16 + 4;
+document.getElementById("demo3").innerHTML = z;
+
+
+let answer1 = "It's alright";
+let answer2 = "He is called 'Johnny'";
+let answer3 = 'He is called "Johnny"';
+
+document.getElementById("demo4").innerHTML =
+answer1 + "<br>" + 
+answer2 + "<br>" + 
+answer3;
+
+
+let x1 = 34.00;
+let x2 = 34;
+let x3 = 3.14;
+
+document.getElementById("demo5").innerHTML =
+x1 + "<br>" + x2 + "<br>" + x3;
+
+let a = 5;
+let b = 5;
+let c = 6;
+
+document.getElementById("demo6").innerHTML =
+(a == b) + "<br>" + (a == c);
+
+</script>
+
+</body>
+</html>
+
+
